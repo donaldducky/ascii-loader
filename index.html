@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+
+<div id="loader"></div>
+<script>
+window.onload = function() {
+  var frames = [
+    '¯\\_(ツ)__',
+    '¯\\_(ツ)___',
+    '¯\\_(ツ)_/¯ \\',
+    '¯\\_(ツ)_/¯ |',
+    '¯\\_(ツ)_/¯ /',
+    '¯\\_(ツ)_/¯ _'
+  ];
+
+  var curFrame = 0;
+  var el = document.getElementById('loader');
+
+  setInterval(function () {
+    el.textContent = frames[curFrame];
+
+    curFrame++;
+    if (curFrame === frames.length) {
+      curFrame = 0;
+    }
+  }, 500);
+};
+</script>
+</body>
+</html>
